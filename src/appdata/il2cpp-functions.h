@@ -8,47 +8,47 @@
 using namespace app;
 
 // God Mode & Hit effect
-DO_APP_FUNC(0x1217D80, bool, AdventureActor_OnHitActor, (AdventureActor* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x15C28F0, List_1_LogicEntity_*, AdventureModuleController_get_playerActors, (AdventureModuleController* __this, MethodInfo* method));
-DO_APP_FUNC(0x1687CD0, bool, AreaEffectEntity_OnHitActor, (AreaEffectEntity* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x168E0D0, bool, AreaEffect_AttackComponent_OnHitActor, (AreaEffect_AttackComponent* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x16F5460, bool, AdventureWeapon_OnHitActor, (AdventureWeapon* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x16DAFB0, bool, AdventureBulletBase_OnHitActor, (AdventureBulletBase* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x16F6940, int32_t, AdventureWeapon_get_uniqueAttackId, (AdventureWeapon* __this, MethodInfo* method));
+DO_APP_FUNC(0x01217D80, bool, AdventureActor_OnHitActor, (AdventureActor* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x015C28F0, List_1_LogicEntity_*, AdventureModuleController_get_playerActors, (AdventureModuleController* __this, MethodInfo* method));
+DO_APP_FUNC(0x01687CD0, bool, AreaEffectEntity_OnHitActor, (AreaEffectEntity* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x0168E0D0, bool, AreaEffect_AttackComponent_OnHitActor, (AreaEffect_AttackComponent* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016F5460, bool, AdventureWeapon_OnHitActor, (AdventureWeapon* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016DAFB0, bool, AdventureBulletBase_OnHitActor, (AdventureBulletBase* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016F6940, int32_t, AdventureWeapon_get_uniqueAttackId, (AdventureWeapon* __this, MethodInfo* method));
 
 // No Cooldown
-DO_APP_FUNC(0x1495070, void, PlayerSkillCd_ReduceSkillSection, (PlayerSkillCd* __this, int32_t skillId, bool beginResume, MethodInfo* method));
-DO_APP_FUNC(0x14957D0, void, PlayerSkillCd_ResetUseInterval, (PlayerSkillCd* __this, int32_t skillId, MethodInfo* method));
+DO_APP_FUNC(0x01495070, void, PlayerSkillCd_ReduceSkillSection, (PlayerSkillCd* __this, int32_t skillId, bool beginResume, MethodInfo* method));
+DO_APP_FUNC(0x014957D0, void, PlayerSkillCd_ResetUseInterval, (PlayerSkillCd* __this, int32_t skillId, MethodInfo* method));
 
 // Unlimited Energy
-DO_APP_FUNC(0x1492F60, void, PlayerSkillCd_ClearEnergy, (PlayerSkillCd* __this, MethodInfo* method));
-DO_APP_FUNC(0x149C900, void, SkillInfo_set_currentEnergy, (SkillInfo* __this, FP value, MethodInfo* method));
-DO_APP_FUNC(0x149C8D0, int32_t, SkillInfo_get_totalEnergy, (SkillInfo* __this, MethodInfo* method));
-DO_APP_FUNC(0x11D0800, void, AdventureSkill_InitSkill, (AdventureSkill* __this, int32_t skillId, GameObject* owner, List_1_UnityEngine_GameObject_* targets, SkillLauncherType__Enum skillLauncherType, bool isInterruptAttack, bool isBreakable, SkillPhaseFeatureFlag__Enum skillCastBehaviourType, SkillCountdownTiming__Enum countdownTiming, Action_1_Boolean_* finishCallback, Action_1_TrueSync_FP_* beginCDForMonsterCallback, bool ingoreCDAndEnergy, MethodInfo* method));
-DO_APP_FUNC(0x1342E20, iFP, AttributeList_GetAttributeValue, (AttributeList* __this, GameEnum_effectAttributeType__Enum type, MethodInfo* method));
+DO_APP_FUNC(0x01492F60, void, PlayerSkillCd_ClearEnergy, (PlayerSkillCd* __this, MethodInfo* method));
+DO_APP_FUNC(0x0149C900, void, SkillInfo_set_currentEnergy, (SkillInfo* __this, FP value, MethodInfo* method));
+DO_APP_FUNC(0x0149C8D0, int32_t, SkillInfo_get_totalEnergy, (SkillInfo* __this, MethodInfo* method));
+DO_APP_FUNC(0x011D0800, void, AdventureSkill_InitSkill, (AdventureSkill* __this, int32_t skillId, GameObject* owner, List_1_UnityEngine_GameObject_* targets, SkillLauncherType__Enum skillLauncherType, bool isInterruptAttack, bool isBreakable, SkillPhaseFeatureFlag__Enum skillCastBehaviourType, SkillCountdownTiming__Enum countdownTiming, Action_1_Boolean_* finishCallback, Action_1_TrueSync_FP_* beginCDForMonsterCallback, bool ingoreCDAndEnergy, MethodInfo* method));
+DO_APP_FUNC(0x01342E20, iFP, AttributeList_GetAttributeValue, (AttributeList* __this, GameEnum_effectAttributeType__Enum type, MethodInfo* method));
 
 // Mob Vacuum
-DO_APP_FUNC(0x12261C0, void, AdventureActor_SyncMovementLocation_1, (AdventureActor* __this, bool clearPath, MethodInfo* method));
-DO_APP_FUNC(0x15B52E0, List_1_LogicEntity_*, AdventureModuleController_get_monsterActors, (AdventureModuleController* __this, MethodInfo* method));
-DO_APP_FUNC(0x15C11B0, void, AdventureModuleController_Update, (AdventureModuleController* __this, MethodInfo* method));
-DO_APP_FUNC(0x961B00, TSVector2, TrueSyncTransform_get_Position, (TrueSyncTransform* __this, MethodInfo* method));
-DO_APP_FUNC(0x1107670, void, TrueSyncTransform_set_Position, (TrueSyncTransform* __this, TSVector2 value, MethodInfo* method));
-DO_APP_FUNC(0x11075B0, void, TrueSyncTransform_set_PositionY, (TrueSyncTransform* __this, FP value, MethodInfo* method));
-DO_APP_FUNC(0x1106FD0, TSVector2, TrueSyncTransform_get_Forward, (TrueSyncTransform* __this, MethodInfo* method));
-DO_APP_FUNC(0x5266480, TSVector2, TSVector2_op_Addition, (TSVector2 value1, TSVector2 value2, MethodInfo* method));
-DO_APP_FUNC(0x5266770, TSVector2, TSVector2_op_Multiply_1, (TSVector2 value, FP scaleFactor, MethodInfo* method));
-DO_APP_FUNC(0x10FCA50, FP, CommonHelper_GetTerrainHeight_1, (TSVector2 targetPosition, FP defaultPostionY, MethodInfo* method));
+DO_APP_FUNC(0x012261C0, void, AdventureActor_SyncMovementLocation_1, (AdventureActor* __this, bool clearPath, MethodInfo* method));
+DO_APP_FUNC(0x015B52E0, List_1_LogicEntity_*, AdventureModuleController_get_monsterActors, (AdventureModuleController* __this, MethodInfo* method));
+DO_APP_FUNC(0x015C11B0, void, AdventureModuleController_Update, (AdventureModuleController* __this, MethodInfo* method));
+DO_APP_FUNC(0x00961B00, TSVector2, TrueSyncTransform_get_Position, (TrueSyncTransform* __this, MethodInfo* method));
+DO_APP_FUNC(0x01107670, void, TrueSyncTransform_set_Position, (TrueSyncTransform* __this, TSVector2 value, MethodInfo* method));
+DO_APP_FUNC(0x011075B0, void, TrueSyncTransform_set_PositionY, (TrueSyncTransform* __this, FP value, MethodInfo* method));
+DO_APP_FUNC(0x01106FD0, TSVector2, TrueSyncTransform_get_Forward, (TrueSyncTransform* __this, MethodInfo* method));
+DO_APP_FUNC(0x05266480, TSVector2, TSVector2_op_Addition, (TSVector2 value1, TSVector2 value2, MethodInfo* method));
+DO_APP_FUNC(0x05266770, TSVector2, TSVector2_op_Multiply_1, (TSVector2 value, FP scaleFactor, MethodInfo* method));
+DO_APP_FUNC(0x010FCA50, FP, CommonHelper_GetTerrainHeight_1, (TSVector2 targetPosition, FP defaultPostionY, MethodInfo* method));
 
 // Instant Break
-DO_APP_FUNC(0x15C3C10, iFP, SpecialAttributeList_GetAttributeValue, (SpecialAttributeList* __this, GameEnum_specialAttributeType__Enum type, MethodInfo* method));
-DO_APP_FUNC(0x1489120, bool, MonsterToughnessInfo_DamageToToughness, (MonsterToughnessInfo* __this, AdventureActor* from, int32_t damage, IList_1_System_Int32_* hitDamageTag, MethodInfo* method));
+DO_APP_FUNC(0x015C3C10, iFP, SpecialAttributeList_GetAttributeValue, (SpecialAttributeList* __this, GameEnum_specialAttributeType__Enum type, MethodInfo* method));
+DO_APP_FUNC(0x01489120, bool, MonsterToughnessInfo_DamageToToughness, (MonsterToughnessInfo* __this, AdventureActor* from, int32_t damage, IList_1_System_Int32_* hitDamageTag, MethodInfo* method));
 
 // Always Crit
-DO_APP_FUNC(0x1013CD0, iFP, ActorAdditionalAttrInfo_get_critRate, (ActorAdditionalAttrInfo* __this, MethodInfo* method));
+DO_APP_FUNC(0x01013CD0, iFP, ActorAdditionalAttrInfo_get_critRate, (ActorAdditionalAttrInfo* __this, MethodInfo* method));
 
-DO_APP_FUNC(0x5240760, FP, FP_op_Implicit_3, (int32_t value, MethodInfo* method));
-DO_APP_FUNC(0x5261680, FP, iFP_get_Value, (iFP* __this, MethodInfo* method));
-DO_APP_FUNC(0x5240770, iFP, iFP_op_Implicit, (FP val, MethodInfo* method));
+DO_APP_FUNC(0x05240760, FP, FP_op_Implicit_3, (int32_t value, MethodInfo* method));
+DO_APP_FUNC(0x05261680, FP, iFP_get_Value, (iFP* __this, MethodInfo* method));
+DO_APP_FUNC(0x05240770, iFP, iFP_op_Implicit, (FP val, MethodInfo* method));
 
 // Singleton
 DO_APP_FUNC(0x00014830, void*, Singleton_GetInstance, (MethodInfo* method));
