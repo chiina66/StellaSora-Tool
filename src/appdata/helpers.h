@@ -11,23 +11,9 @@
 #include <fstream>
 
 #include "il2cpp-metadata-version.h"
-#include "il2cpp-api-functions.h"
 
-static void* __get_instance_from_class(Il2CppClass* klass) {
-    const MethodInfo* mi = il2cpp_class_get_method_from_name(klass, "get_Instance", 0);
-    if (!mi) {
-        Il2CppClass* p = il2cpp_class_get_parent(klass);
-        while (p && !mi) {
-            mi = il2cpp_class_get_method_from_name(p, "get_Instance", 0);
-            p = il2cpp_class_get_parent(p);
-        }
-    }
-    if (!mi) return nullptr;
-    Il2CppObject* obj = il2cpp_runtime_invoke(mi, nullptr, nullptr, nullptr);
-    return obj;
-}
-
-#define GET_SINGLETON(tpname) reinterpret_cast<app:: ## tpname ## *>(__get_instance_from_class(reinterpret_cast<Il2CppClass*>(*app::## tpname ##__TypeInfo)))
+#define IS_SINGLETON_LOADED(className) (/**app::Singleton_1_## className ##___TypeInfo != nullptr &&*/ *app::Singleton_1_ ## className ## __get_Instance__MethodInfo != nullptr)
+#define GET_SINGLETON(tpname) IS_SINGLETON_LOADED(tpname) ? reinterpret_cast<app:: ## tpname ## *>(app::Singleton_GetInstance(*app::Singleton_1_ ## tpname ## __get_Instance__MethodInfo)) : nullptr
 
 #define INIT_ILCPP_CLASS(className, expr) (il2cpp_runtime_class_init(reinterpret_cast<Il2CppClass*>(*app::## className ##__TypeInfo)), expr)
 #define GET_STATIC_FIELDS(tpname) INIT_ILCPP_CLASS(tpname, (*app::## tpname ##__TypeInfo)->static_fields)
