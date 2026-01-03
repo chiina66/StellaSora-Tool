@@ -8,13 +8,13 @@
 using namespace app;
 
 // God Mode & Hit effect
-DO_APP_FUNC(0x01217D80, bool, AdventureActor_OnHitActor, (AdventureActor* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x015C28F0, List_1_LogicEntity_*, AdventureModuleController_get_playerActors, (AdventureModuleController* __this, MethodInfo* method));
-DO_APP_FUNC(0x01687CD0, bool, AreaEffectEntity_OnHitActor, (AreaEffectEntity* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x0168E0D0, bool, AreaEffect_AttackComponent_OnHitActor, (AreaEffect_AttackComponent* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x016F5460, bool, AdventureWeapon_OnHitActor, (AdventureWeapon* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x016DAFB0, bool, AdventureBulletBase_OnHitActor, (AdventureBulletBase* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
-DO_APP_FUNC(0x016F6940, int32_t, AdventureWeapon_get_uniqueAttackId, (AdventureWeapon* __this, MethodInfo* method));
+DO_APP_FUNC(0x01216D80, bool, AdventureActor_OnHitActor, (AdventureActor* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x015C18F0, List_1_LogicEntity_*, AdventureModuleController_get_playerActors, (AdventureModuleController* __this, MethodInfo* method));
+DO_APP_FUNC(0x01686CD0, bool, AreaEffectEntity_OnHitActor, (AreaEffectEntity* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x0168D0D0, bool, AreaEffect_AttackComponent_OnHitActor, (AreaEffect_AttackComponent* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* entity, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016F4460, bool, AdventureWeapon_OnHitActor, (AdventureWeapon* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016D9FB0, bool, AdventureBulletBase_OnHitActor, (AdventureBulletBase* __this, HitBox* hitBox, int32_t uniqueAttackId, int32_t onceAttackTargetCount, LogicEntity* actor, DeterministicRaycastHit* raycastHit, bool* damaged, GameObject* hurtEffectPrefab, bool isHittedEffectScale, bool effectIgnoreTimeScale, MethodInfo* method));
+DO_APP_FUNC(0x016F5940, int32_t, AdventureWeapon_get_uniqueAttackId, (AdventureWeapon* __this, MethodInfo* method));
 
 // No Cooldown
 DO_APP_FUNC(0x01495070, void, PlayerSkillCd_ReduceSkillSection, (PlayerSkillCd* __this, int32_t skillId, bool beginResume, MethodInfo* method));
